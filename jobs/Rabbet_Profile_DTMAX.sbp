@@ -1,0 +1,50 @@
+'02 Basic Deck Rabbet Profile DTMAX
+'File created: Monday November 16 2015 - 09:49 AM
+'For ShopBot Control: SB3 Alpha from Vectric
+'
+'UNITS:Inches
+'
+IF %(25)=1 THEN GOTO UNIT_ERROR	'check to see software is set to standard
+SA                             	'Set program to absolute coordinate mode
+TR, 18000
+'
+'
+'Toolpaths used in this file:
+'Rabbet
+'Tools used in this file: 
+'2 = End Mill (0.25 inch)
+'
+'Toolpath Name = Rabbet
+'Tool Name   = End Mill (0.25 inch)
+&Tool =2                    'Jog Z axis to safe height
+'
+c9
+TR,18000
+C6                   'Return tool to home in x and y
+PAUSE 2
+'
+MS,2.0,2.0
+JZ,0.800000
+J2,0.000000,0.000000
+J3,-0.125000,0.000000,0.200000
+M3,-0.125000,0.000000,-0.187000
+M3,-0.125000,24.000000,-0.187000
+CG, ,0.000000,24.125000,0.125000,0.000000,T,1
+M3,36.000000,24.125000,-0.187000
+CG, ,36.125000,24.000000,0.000000,-0.125000,T,1
+M3,36.125000,0.000000,-0.187000
+CG, ,36.000000,-0.125000,-0.125000,0.000000,T,1
+M3,0.000000,-0.125000,-0.187000
+CG, ,-0.125000,0.000000,0.000000,0.125000,T,1
+J3,-0.125000,0.000000,0.200000
+JZ,0.800000
+J2,0.000000,0.000000
+'
+'Turning router OFF
+C7
+END
+'
+'
+UNIT_ERROR:
+C#,91                            'Run file explaining unit error
+END
