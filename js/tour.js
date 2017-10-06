@@ -106,7 +106,7 @@ var bitYes = [
         "id": "8",
         "video": "images/insert-b-dtm.mp4",
         "header": "Adding a bit",
-        "text": "Place your fingers high on the spindle shaft. With your other hand start to screw on collet nut with collet. When it is threaded but not tight inset you bit and continue to scre until finger tight.",
+        "text": "Place your fingers high on the spindle shaft. With your other hand start to screw on collet nut. When it is threaded but not tight inset your bit and continue to tighten until finger tight.",
         "actionText" : "Move to center",
         "action": ""
     },
